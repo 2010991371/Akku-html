@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Akku ❤️</title>
+
+<style>
+body {
+    margin:0;
+    background:#000;
+    color:white;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+.screen {
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+}
+
+h1 {
+    font-size:70px;
+    animation:fade 2s;
+}
+
+h2 {
+    font-size:40px;
+}
+
+p {
+    font-size:20px;
+    line-height:1.7;
+    max-width:600px;
+    opacity:.9;
+}
+
+img {
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:30px;
+    box-shadow:0 0 40px rgba(255,0,80,.5);
+}
+
+.heart {
+    font-size:70px;
+    animation:pulse 1.5s infinite;
+}
+
+button {
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#ff2d55;
+    color:white;
+    font-size:18px;
+}
+
+@keyframes fade {
+    from {opacity:0; transform:scale(1.3);}
+    to {opacity:1; transform:scale(1);}
+}
+
+@keyframes pulse {
+    50% {transform:scale(1.2);}
+}
+
+.floating {
+    position:fixed;
+    bottom:-20px;
+    animation:float 6s linear infinite;
+}
+
+@keyframes float {
+    from {transform:translateY(0);opacity:1;}
+    to {transform:translateY(-110vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="screen">
+    <h1>Akku ❤️</h1>
+    <p>I have something important to say...</p>
+</div>
+
+
+<div class="screen">
+
+    <!-- Put your photo name here -->
+    <img src="YOUR_PHOTO.jpg">
+
+    <h2>I'm Sorry</h2>
+
+    <p>
+    I know I made mistakes and I know things could have been handled better.
+    I never wanted to hurt you.
+    </p>
+
+    <p>
+    You are special to me, and I truly want to make things right.
+    </p>
+
+</div>
+
+
+<div class="screen">
+
+    <div class="heart">❤️</div>
+
+    <h2>One Last Thing...</h2>
+
+    <p>
+    I hope we can leave the bad moments behind
+    and create better memories together.
+    </p>
+
+    <h2>Sorry, Akku ❤️</h2>
+
+</div>
+
+
+<script>
+setInterval(()=>{
+let h=document.createElement("div");
+h.innerHTML="❤️";
+h.className="floating";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(15+Math.random()*30)+"px";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},800);
+</script>
+
+</body>
+</html>
